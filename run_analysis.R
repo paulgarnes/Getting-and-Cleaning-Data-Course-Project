@@ -58,7 +58,7 @@ names(joinLabel) <- "activity"
 names(joinSubject) <- "subject"
 tidyData <- cbind(joinSubject, joinLabel, joinData)
 dim(tidyData) # (10,299 rows; 68 columns)
-write.table(tidyData, "tidyData.txt") # export the 1st dataset
+write.table(tidyData, "tidyData.txt", row.name=FALSE) # export the 1st dataset
 
 
 # STEP 5: Creates a second, independent tidy data set with the average of 
@@ -82,4 +82,4 @@ for(i in 1:subjectLen) {
         }
 }
 head(result)
-write.table(result, "tidyDataWithMeans.txt") # export the 2nd dataset
+write.table(result, "tidyDataWithMeans.txt", row.name=FALSE) # export the 2nd dataset
