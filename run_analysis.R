@@ -81,5 +81,6 @@ for(i in 1:subjectLen) {
                 row <- row + 1
         }
 }
+# Take a look at the result...
 head(result)
 write.table(result, "tidyDataWithMeans.txt", row.name=FALSE) # export the 2nd dataset
